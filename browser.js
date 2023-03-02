@@ -215,7 +215,7 @@ exports.encrypt = function(publicKeyTo, msg, opts) {
     // There is a very unlikely possibility that it is not a valid key
     while(!isValidPrivateKey(ephemPrivateKey))
     {
-      ephemPrivateKey = opts.ephemPrivateKey || randomBytes(32);
+      ephemPrivateKey = randomBytes(32);
     }
     ephemPublicKey = getPublic(ephemPrivateKey);
     resolve(derive(ephemPrivateKey, publicKeyTo));
