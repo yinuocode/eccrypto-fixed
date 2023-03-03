@@ -1,6 +1,6 @@
 /**
- * Node.js eccrypto implementation.
- * @module eccrypto
+ * Node.js eccrypto-fixed implementation.
+ * @module eccrypto-fixed
  */
 
 "use strict";

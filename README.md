@@ -40,7 +40,7 @@ So we use [seck256k1](https://www.npmjs.com/package/secp256k1) library in Node f
 
 ```js
 var crypto = require("crypto");
-var eccrypto = require("eccrypto");
+var eccrypto = require("eccrypto-fixed");
 
 // A new random 32-byte private key.
 var privateKey = eccrypto.generatePrivate();
@@ -64,7 +64,7 @@ eccrypto.sign(privateKey, msg).then(function(sig) {
 ### ECDH
 
 ```js
-var eccrypto = require("eccrypto");
+var eccrypto = require("eccrypto-fixed");
 
 var privateKeyA = eccrypto.generatePrivate();
 var publicKeyA = eccrypto.getPublic(privateKeyA);
@@ -81,7 +81,7 @@ eccrypto.derive(privateKeyA, publicKeyB).then(function(sharedKey1) {
 ### ECIES
 
 ```js
-var eccrypto = require("eccrypto");
+var eccrypto = require("eccrypto-fixed");
 
 var privateKeyA = eccrypto.generatePrivate();
 var publicKeyA = eccrypto.getPublic(privateKeyA);
