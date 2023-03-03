@@ -1,7 +1,9 @@
-[![NPM](https://nodei.co/npm/eccrypto.png)](https://www.npmjs.com/package/eccrypto)
-
+## fix
+- avoid getting into an infinite loop when the specified ephemPrivateKey is invalid
+- Added support for arm64 node-gyp compiling for EC2 graviton compatibility
 JavaScript Elliptic curve cryptography library for both browserify and node.
-
+- For electron-builder background.js issue when bundling.
+Module not found: Error: Can't resolve './build/Release/ecdh' in '/node_modules/eccrypto'
 ## Motivation
 
 There is currently not any isomorphic ECC library which provides ECDSA, ECDH and ECIES for both Node.js and Browser and uses the fastest implementation available (e.g. [secp256k1-node](https://github.com/wanderer/secp256k1-node) is much faster than other libraries but can be used only on Node.js). So `eccrypto` is an attempt to create one.
